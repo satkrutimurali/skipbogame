@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skip-Bo 3-Player</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="game-shell">
+      <header class="top-bar">
+        <div>
+          <h1>Skip-Bo</h1>
+          <p>3-player Skip-Bo with 30-card stock piles, 4 discard piles each, and 4 shared building piles.</p>
+        </div>
+        <button id="newGameBtn">New Game</button>
+      </header>
+
+      <section class="instructions">
+        <p>Draw up to 5 cards at the start of your turn. Play from your hand, the top of your stock pile, or the top of any personal discard pile onto the shared building piles. Discard one hand card to a personal discard pile to end your turn.</p>
+      </section>
+
+      <section class="status-bar">
+        <div class="status-card">
+          <span class="label">Turn</span>
+          <strong id="turnCount">1</strong>
+        </div>
+        <div class="status-card">
+          <span class="label">Draw pile</span>
+          <strong id="drawPileCount">0</strong>
+        </div>
+        <div class="status-card">
+          <span class="label">Current player</span>
+          <strong id="currentPlayer">You</strong>
+        </div>
+      </section>
+
+      <section class="table-layout">
+        <div id="playerTop" class="player-seat player-top"></div>
+
+        <div class="table-middle">
+          <div id="playerLeft" class="player-seat player-left"></div>
+
+          <div class="table-center">
+            <div class="board-center">
+              <div class="draw-area">
+                <h2>Draw</h2>
+                <div id="drawPileVisual" class="card back-card">Draw</div>
+              </div>
+
+              <div class="building-grid" id="buildingPiles"></div>
+            </div>
+            <div class="actions center-actions">
+              <button id="endTurnBtn">End Turn</button>
+              <p id="messageBox">Start a new game to begin.</p>
+            </div>
+          </div>
+        </div>
+
+        <div id="playerBottom" class="player-seat player-bottom"></div>
+      </section>
+
+      <section class="hand-section">
+        <h2>Your Hand</h2>
+        <div id="handArea" class="hand-area"></div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
